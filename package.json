@@ -1,19 +1,49 @@
 {
-  "name": "options-calculator",
+  "name": "stock-options-calculator",
   "version": "0.0.1",
   "description": "Common calculations on stock options",
   "main": "index.js",
-  "type": "module",
+  "type": "commonjs",
+  "types": "index.d.ts",
   "scripts": {
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
-    "test": "tap -J test/*.test.js"
+    "test": "tap -J test/*.test.js",
+    "test:ci": "npm run lint && npm test -- --coverage-report=lcovonly && npm run test:typescript",
+    "test:typescript": "tsd"
   },
-  "keywords": [],
+  "keywords": [
+    "stock",
+    "options",
+    "calculator"
+  ],
   "author": "Vlad Betsun <vlad.betcun@gmail.com>",
+  "contributors": [
+    {
+      "name": "Vlad Betsun",
+      "email": "vlad.betcun@gmail.com",
+      "author": true
+    }
+  ],
   "license": "ISC",
+  "engines": {
+    "node": ">=10.16.0"
+  },
   "devDependencies": {
+    "snazzy": "^9.0.0",
     "standard": "^16.0.3",
-    "tap": "^15.0.5"
+    "tap": "^15.0.5",
+    "tsd": "^0.14.0",
+    "typescript": "^4.2.4"
+  },
+  "standard": {
+    "ignore": [
+      "index.d.ts",
+      "types/*",
+      "test/types/*"
+    ]
+  },
+  "tsd": {
+    "directory": "test/types"
   }
 }
