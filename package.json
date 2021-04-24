@@ -1,0 +1,19 @@
+{
+  "name": "options-calculator",
+  "version": "0.0.1",
+  "description": "Common calculations on stock options",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "standard --verbose | snazzy",
+    "lint:fix": "standard --fix",
+    "test": "tap -J test/*.test.js"
+  },
+  "keywords": [],
+  "author": "Vlad Betsun <vlad.betcun@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "standard": "^16.0.3",
+    "tap": "^15.0.5"
+  }
+}
