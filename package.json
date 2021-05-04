@@ -32,7 +32,7 @@
   "devDependencies": {
     "snazzy": "^9.0.0",
     "standard": "^16.0.3",
-    "tap": "^15.0.5",
+    "tap": "^15.0.6",
     "tsd": "^0.14.0",
     "typescript": "^4.2.4"
   },
