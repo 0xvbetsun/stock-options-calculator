@@ -12,6 +12,10 @@
     "test:ci": "npm run lint && npm test -- --coverage-report=lcovonly && npm run test:typescript",
     "test:typescript": "tsd"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VBetsun/stock-options-calculator.git"
+  },
   "keywords": [
     "stock",
     "options",
@@ -26,6 +30,10 @@
     }
   ],
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VBetsun/stock-options-calculator/issues"
+  },
+  "homepage": "https://github.com/VBetsun/stock-options-calculator",
   "engines": {
     "node": ">=10.16.0"
   },
@@ -38,9 +46,7 @@
   },
   "standard": {
     "ignore": [
-      "index.d.ts",
-      "types/*",
-      "test/types/*"
+      "index.d.ts"
     ]
   },
   "tsd": {
