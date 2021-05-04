@@ -44,6 +44,6 @@
     ]
   },
   "tsd": {
-    "directory": "test/types"
+    "directory": "test"
   }
 }

@@ -1,7 +1,20 @@
 'use strict'
 
-const { OptionType } = require('./lib/enum')
 const breakEvenStockPrice = require('./lib/breakEvenStockPrice')
-const payoffFromBuying = require('./lib/payoffFromBuying')
+const { PositionType, OptionType } = require('./lib/enum')
+const {
+  payoffFromBuyingCall,
+  payoffFromBuyingPut,
+  payoffFromSellingCall,
+  payoffFromSellingPut
+} = require('./lib/payoff')
 
-module.exports = { OptionType, breakEvenStockPrice, payoffFromBuying }
+module.exports = {
+  breakEvenStockPrice,
+  payoffFromBuyingCall,
+  payoffFromBuyingPut,
+  payoffFromSellingCall,
+  payoffFromSellingPut,
+  PositionType,
+  OptionType
+}
