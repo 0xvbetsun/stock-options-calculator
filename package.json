@@ -2,13 +2,13 @@
   "name": "stock-options-calculator",
   "version": "0.0.1",
   "description": "Common calculations on stock options",
-  "main": "index.js",
-  "type": "commonjs",
+  "exports": "./index.js",
+  "type": "module",
   "types": "index.d.ts",
   "scripts": {
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
-    "test": "tap -J test/*.test.js",
+    "test": "tap --node-arg='--no-warnings' --node-arg='--experimental-loader' --node-arg='@istanbuljs/esm-loader-hook' -J test/*.js",
     "test:ci": "npm run lint && npm test -- --coverage-report=lcovonly && npm run test:typescript",
     "test:typescript": "tsd"
   },
@@ -33,11 +33,12 @@
   "bugs": {
     "url": "https://github.com/VBetsun/stock-options-calculator/issues"
   },
-  "homepage": "https://github.com/VBetsun/stock-options-calculator",
+  "homepage": "https://github.com/VBetsun/stock-options-calculator#readme",
   "engines": {
-    "node": ">=10.16.0"
+    "node": "^12.20.0 || ^14.13.1 || >=16.0.0"
   },
   "devDependencies": {
+    "@istanbuljs/esm-loader-hook": "^0.1.2",
     "snazzy": "^9.0.0",
     "standard": "^16.0.3",
     "tap": "^15.0.6",
@@ -50,6 +51,11 @@
     ]
   },
   "tsd": {
-    "directory": "test"
+    "directory": "test",
+    "compilerOptions": {
+      "lib": [
+        "es2015"
+      ]
+    }
   }
 }

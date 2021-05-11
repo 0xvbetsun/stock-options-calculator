@@ -1,12 +1,10 @@
-'use strict'
-
-const test = require('tap').test
-const {
+import { test } from 'tap'
+import {
   payoffFromBuyingCall,
   payoffFromBuyingPut,
   payoffFromSellingCall,
   payoffFromSellingPut
-} = require('../lib/payoff.js')
+} from '../lib/payoff.js'
 
 test('payoff for `call` option in `long` position', t => {
   t.plan(4)
