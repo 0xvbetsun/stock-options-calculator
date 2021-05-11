@@ -1,4 +1,5 @@
 .editorconfig
+.vscode
 .gitattributes
 .git
 .DS_Store

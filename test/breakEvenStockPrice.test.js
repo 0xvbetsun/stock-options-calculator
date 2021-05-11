@@ -1,8 +1,6 @@
-'use strict'
-
-const test = require('tap').test
-const { OptionType } = require('../lib/enum.js')
-const breakEvenStockPrice = require('../lib/breakEvenStockPrice.js')
+import { test } from 'tap'
+import { OptionType } from '../lib/enum.js'
+import breakEvenStockPrice from '../lib/breakEvenStockPrice.js'
 
 test('`call` option', t => {
   t.plan(2)
