@@ -5,6 +5,12 @@
 [![Coverage Status](https://coveralls.io/repos/github/VBetsun/stock-options-calculator/badge.svg?branch=main)](https://coveralls.io/github/VBetsun/stock-options-calculator?branch=main)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
 
+## Table of Contents
+
+  - [Install](#install)
+  - [Usage](#usage)
+  - [License](#license)
+  
 ## Install
 
 ```sh
@@ -12,6 +18,8 @@ npm i stock-options-calculator
 ```
 
 ## Usage
+
+TODO
 
 ## License
 

@@ -6,4 +6,5 @@
 .gitignore
 .github
 .nyc_output
+package-lock.json
 coverage/

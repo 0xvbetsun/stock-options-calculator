@@ -1,14 +1,15 @@
 import {expectType} from 'tsd';
 import {
-    breakEvenStockPrice,
+    callBreakEvenPoint,
+    putBreakEvenPoint,
     payoffFromBuyingCall,
     payoffFromBuyingPut,
     payoffFromSellingCall,
     payoffFromSellingPut,
-    OptionType
 } from '..';
 
-expectType<number>(breakEvenStockPrice(50, OptionType.Call, 10));
+expectType<number>(callBreakEvenPoint(50, 10));
+expectType<number>(putBreakEvenPoint(50, 10));
 expectType<number>(payoffFromBuyingCall(50, 70, 10));
 expectType<number>(payoffFromBuyingPut(50, 70, 10));
 expectType<number>(payoffFromSellingCall(50, 70, 10));

@@ -1,5 +1,4 @@
-export { default as breakEvenStockPrice } from './lib/breakEvenStockPrice.js'
-export { PositionType, OptionType } from './lib/enum.js'
+export { callBreakEvenPoint, putBreakEvenPoint } from './lib/breakEvenPoint.js'
 export {
   payoffFromBuyingCall,
   payoffFromBuyingPut,
