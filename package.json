@@ -1,6 +1,6 @@
 {
   "name": "stock-options-calculator",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Common calculations on stock options",
   "exports": "./index.js",
   "type": "module",
@@ -45,7 +45,6 @@
     "tsd": "^0.15.0",
     "typescript": "^4.2.4"
   },
-
   "dependencies": {
     "ajv": "^6.12.6"
   },
