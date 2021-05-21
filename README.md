@@ -1,4 +1,4 @@
-# stock-options-calculator
+# 📉 Stock Options Calculator 📈
 
 ![CI](https://github.com/VBetsun/stock-options-calculator/workflows/CI/badge.svg)
 [![Known Vulnerabilities](https://snyk.io/test/github/VBetsun/stock-options-calculator/badge.svg)](https://snyk.io/test/github/VBetsun/stock-options-calculator)
@@ -19,8 +19,10 @@ npm i stock-options-calculator
 
 ## Usage
 
-TODO
+<details><summary><b>Count payoff</b></summary>TODO </details>
+<details><summary><b>Find break even point</b></summary>TODO </details>
+<details><summary><b>Count price using Black-Scholes Model</b></summary>TODO </details>
 
 ## License
 
-ISC
+Stock Options Calculator is provided under the [ISC License](LICENSE)
