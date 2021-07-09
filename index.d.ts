@@ -12,7 +12,7 @@ type BlackScholesInput = {
     interestRate: number, 
     volatility: number, 
     timeToExpire: number 
-    dividend: number, 
+    dividend?: number, 
 }
 
 /**

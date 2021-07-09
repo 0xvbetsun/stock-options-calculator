@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@istanbuljs/esm-loader-hook": "^0.1.2",
+    "husky": "^6.0.0",
     "snazzy": "^9.0.0",
     "standard": "^16.0.3",
     "tap": "^15.0.6",
