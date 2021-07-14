@@ -32,3 +32,13 @@ test('`put` option', t => {
     t.equal(putBreakEvenPoint(50), 50)
   })
 })
+
+test('throw errors with invalid input', t => {
+  t.plan(4)
+
+  t.throws(() => callBreakEvenPoint(-1), new Error('.strike should be >= 0'), 'with `strike` less than allowed')
+  t.throws(() => putBreakEvenPoint(-1), new Error('.strike should be >= 0'), 'with `strike` less than allowed')
+
+  t.throws(() => callBreakEvenPoint(1, -1), new Error('.premium should be >= 0'), 'with `premium` less than allowed')
+  t.throws(() => putBreakEvenPoint(1, -1), new Error('.premium should be >= 0'), 'with `premium` less than allowed')
+})

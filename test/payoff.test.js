@@ -42,3 +42,22 @@ test('payoff for `put` option in `short` position', t => {
   t.equal(payoffFromSellingPut(50, 60), 0, 'get no profit when `strike` without `premium` is less than `stock`')
   t.equal(payoffFromSellingPut(50, 30, 10), -10, 'get loss when `strike` with `premium` is more than `stock`')
 })
+
+test('throw errors with invalid input', t => {
+  t.plan(12)
+
+  t.throws(() => payoffFromBuyingCall(-1), new Error('.strike should be >= 0'), 'with `strike` less than allowed')
+  t.throws(() => payoffFromBuyingPut(-1), new Error('.strike should be >= 0'), 'with `strike` less than allowed')
+  t.throws(() => payoffFromSellingCall(-1), new Error('.strike should be >= 0'), 'with `strike` less than allowed')
+  t.throws(() => payoffFromSellingPut(-1), new Error('.strike should be >= 0'), 'with `strike` less than allowed')
+
+  t.throws(() => payoffFromBuyingCall(1, -1), new Error('.stock should be >= 0'), 'with `stock` less than allowed')
+  t.throws(() => payoffFromBuyingPut(1, -1), new Error('.stock should be >= 0'), 'with `stock` less than allowed')
+  t.throws(() => payoffFromSellingCall(1, -1), new Error('.stock should be >= 0'), 'with `stock` less than allowed')
+  t.throws(() => payoffFromSellingPut(1, -1), new Error('.stock should be >= 0'), 'with `stock` less than allowed')
+
+  t.throws(() => payoffFromBuyingCall(1, 1, -1), new Error('.premium should be >= 0'), 'with `premium` less than allowed')
+  t.throws(() => payoffFromBuyingPut(1, 1, -1), new Error('.premium should be >= 0'), 'with `premium` less than allowed')
+  t.throws(() => payoffFromSellingCall(1, 1, -1), new Error('.premium should be >= 0'), 'with `premium` less than allowed')
+  t.throws(() => payoffFromSellingPut(1, 1, -1), new Error('.premium should be >= 0'), 'with `premium` less than allowed')
+})

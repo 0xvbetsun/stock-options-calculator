@@ -19,9 +19,67 @@ npm i stock-options-calculator
 
 ## Usage
 
-<details><summary><b>Count payoff</b></summary>TODO </details>
-<details><summary><b>Find break even point</b></summary>TODO </details>
-<details><summary><b>Count price using Black-Scholes Model</b></summary>TODO </details>
+### Find break even point
+
+### Count payoff
+
+#### Arguments
+
+  | Argument | Type    | Description                                       |
+  |----------|---------|---------------------------------------------------|
+  | strike   | number  | strike price ($$$ per share)                      |
+  | stock    | number  | underlying price ($$$ per share)                  |
+  | premium  | number? | current market price of an option ($$$ per share) |
+
+- From buying call option
+  
+  #### Returns
+  `number` - payoff from buying call ($$$ per share)
+  #### Example
+
+  ```js
+  const { payoffFromBuyingCall } = require('stock-options-calculator')
+
+  payoffFromBuyingCall(50, 70) // returns 20
+  payoffFromBuyingCall(50, 70, 10) // returns 10
+  ```
+- From buying put option
+  
+  #### Returns
+  `number` - payoff from buying put ($$$ per share)
+  #### Example
+
+  ```js
+  const { payoffFromBuyingPut } = require('stock-options-calculator')
+
+  payoffFromSellingCall(50, 40) // returns 0
+  payoffFromSellingCall(50, 40, 10) // returns 10
+  ```
+- From selling call option
+  
+  #### Returns
+  `number` - payoff from selling call ($$$ per share)
+  #### Example
+
+  ```js
+  const { payoffFromBuyingCall } = require('stock-options-calculator')
+
+  payoffFromBuyingCall(50, 70) // returns 20
+  payoffFromBuyingCall(50, 70, 10) // returns 10
+  ```
+- From selling put option
+  
+  #### Returns
+  `number` - payoff from selling put ($$$ per share)
+  #### Example
+
+  ```js
+  const { payoffFromSellingPut } = require('stock-options-calculator')
+
+  payoffFromSellingPut(50, 40) // returns -10
+  payoffFromSellingPut(50, 70, 10) // returns 10
+  ```
+### Count price using Black-Scholes Model
 
 ## License
 

@@ -55,7 +55,7 @@ export function payoffFromSellingCall(strike: number, stock: number, premium?: n
  * @param stock - underlying price ($$$ per share)
  * @param premium - current market price of an option ($$$ per share)
  */
-export function payoffFromSellingPut(strike: number, stock: number, premium?: number): number;
+export function payoffFromSellingPut(strike: number, stock: number, premium: number): number;
 
 /**
  * @param blackScholesInput 
