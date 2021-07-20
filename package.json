@@ -1,6 +1,6 @@
 {
   "name": "stock-options-calculator",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "Common calculations on stock options",
   "exports": "./index.js",
   "type": "module",
@@ -9,7 +9,7 @@
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
     "test": "tap --node-arg=--no-warnings --node-arg=--experimental-loader --node-arg=@istanbuljs/esm-loader-hook -J ./test/*.js",
-    "test:ci": "npm run lint && npm test -- --coverage-report=lcovonly && npm run test:typescript",
+    "test:ci": "npm run lint && npm test && npm run test:typescript",
     "test:typescript": "tsd"
   },
   "repository": {
