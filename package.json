@@ -46,8 +46,7 @@
   },
   "files": [
     "lib",
-    "index.js",
-    "index.cjs",
+    "commonjs",
     "index.d.ts"
   ],
   "devDependencies": {
