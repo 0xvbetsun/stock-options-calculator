@@ -29,8 +29,8 @@ test('price for `put` option', t => {
 test('throw errors with invalid `Black-Scholes Input`', t => {
   t.plan(20)
 
-  t.throws(() => callPrice({}), new Error('should have required property \'stock\',  should have required property \'strike\',  should have required property \'interestRate\',  should have required property \'volatility\',  should have required property \'timeToExpire\''), 'with empty input')
-  t.throws(() => putPrice({}), new Error('should have required property \'stock\',  should have required property \'strike\',  should have required property \'interestRate\',  should have required property \'volatility\',  should have required property \'timeToExpire\''), 'with empty input')
+  t.throws(() => callPrice(), new Error('should have required property \'stock\',  should have required property \'strike\',  should have required property \'interestRate\',  should have required property \'volatility\',  should have required property \'timeToExpire\''), 'with empty input')
+  t.throws(() => putPrice(), new Error('should have required property \'stock\',  should have required property \'strike\',  should have required property \'interestRate\',  should have required property \'volatility\',  should have required property \'timeToExpire\''), 'with empty input')
 
   t.throws(() => callPrice(buildBlackScholesInput({ stock: -1 })), new Error('.stock should be >= 0'), 'with `stock` less than allowed')
   t.throws(() => putPrice(buildBlackScholesInput({ stock: -1 })), new Error('.stock should be >= 0'), 'with `stock` less than allowed')
